@@ -1,0 +1,39 @@
+.conteudo
+{
+    box-shadow: 0px 10px 60px black;
+    margin-top: 50px;
+    width: 500px;
+    
+}
+ul strong
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.questoes 
+{
+    padding-bottom: 10px;
+
+}
+
+li
+{
+    list-style-type: none;
+}
+
+input[type="number"]
+{
+    width: 50px;
+    border-radius: 2px;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+input[type="button"]
+{
+    margin-left: 10px;
+    width: 100px;
+}
