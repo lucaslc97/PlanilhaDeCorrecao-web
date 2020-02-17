@@ -9,17 +9,20 @@ function gerar()
 
     if (quantidadeObj == 0 )
     {
-        alert("[ERRO] Digite um numero maior que zero!!")
-        listaArray.push('')
+        alert("[ERRO] Digite um numero maior que zero!!");
+        listaArray = [];
 
     }else
     {
-        listaArray.push('')
-        for (var i = 1; i <= quantidadeObj; i++)
+        listaArray = [];
+        var i; 
+        listaArray.push(`<li><strong class="a">${i++}</strong> - <input type="text">  <input type="number"> <input type="number"></li>`); 
+        for (i = 2 ; i <= quantidadeObj; i++)
         {
-            listaArray.push(`<li><strong class="a">${i}</strong> - <input type="text"></li>`); 
-            list.innerHTML = listaArray.join()
+            listaArray.push(`<li><strong class="a">${i}</strong> - <input type="text">  <input type="number"> <input type="number"></li>`); 
+            list.innerHTML = listaArray.join("");
         }
+        //console.log(listaArray);
     }
    
 
