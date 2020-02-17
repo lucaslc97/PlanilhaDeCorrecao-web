@@ -12,14 +12,31 @@ ul strong
     border-radius: 20px;
     font-size: 20px;
 }
+#objq
+{
+    font-size: 30px;
+    padding-left: 100px;
+}
+#ate 
+{
+    padding-left: 310px;
+    font-size: 20px;
+}
 .questoes 
 {
     padding-bottom: 10px;
+   
 
+}
+
+ul
+{
+    margin-top: -10px;
 }
 
 li
 {
+    
     list-style-type: none;
 }
 

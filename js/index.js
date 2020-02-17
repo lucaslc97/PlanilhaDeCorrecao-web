@@ -16,13 +16,15 @@ function gerar()
     {
         listaArray = [];
         var i; 
-        listaArray.push(`<li><strong class="a">${i++}</strong> - <input type="text">  <input type="number"> <input type="number"></li>`); 
-        for (i = 2 ; i <= quantidadeObj; i++)
+
+        document.getElementById('objq').innerHTML = "<strong> Objetivos |  Questões</strong>"
+        document.getElementById('ate').innerHTML = "De - Até"
+
+        for (i = 1 ; i <= quantidadeObj; i++)
         {
             listaArray.push(`<li><strong class="a">${i}</strong> - <input type="text">  <input type="number"> <input type="number"></li>`); 
             list.innerHTML = listaArray.join("");
         }
-        //console.log(listaArray);
     }
    
 
