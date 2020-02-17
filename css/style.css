@@ -54,3 +54,9 @@ input[type="button"]
     margin-left: 10px;
     width: 100px;
 }
+
+#avançar
+{
+    margin-left: 350px;
+    margin-bottom: 20px;
+}
