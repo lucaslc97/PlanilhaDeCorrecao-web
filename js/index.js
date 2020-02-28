@@ -1,8 +1,9 @@
-
+   
 
 function gerar()
 {
     let quantidadeObj = document.getElementById('obj').value;
+    let quantidadeQtd = document.getElementById('qtd').value;
     let list = document.getElementById('lista');
     var listaArray = [];
     
@@ -27,5 +28,19 @@ function gerar()
         }
     }
    
+
+}
+
+function avancar()
+{
+
+    if ((this.quantidadeObj == 0) || (this.quantidadeQtd == 0 ))
+    {
+        alert('[ERRO]Por favor preencha todos os campos')
+
+    }
+
+
+
 
 }
