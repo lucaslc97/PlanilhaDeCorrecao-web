@@ -20,14 +20,18 @@
           <ul id="lista">
           </ul>
         </div>
-        <div id="pag2" v-show='status'>
-          <p>Gabarito</p>
-          
-          <p>Conceito</p>
-        </div>
+        <div class="segundaPaginaPrincipal" id="pag2" v-show='status'>
+            <div class="segundaPagina gabarito2">
+                  <p>Gabarito</p>
+                  <ul id="gabarito"></ul>
+            </div>
+           <div class="segundaPagina">
+                <p>Conceito</p>
+           </div>
+         </div>
         <div id="pag3" v-show="status">
         </div>
-        <div id="pag4" v-show='status'>
+          <div id="pag4" v-show='status'>
           <h1>Pagina 4 </h1>
         </div>
         <input id="avançar" type="button" value="Avançar" onclick="avancar()">

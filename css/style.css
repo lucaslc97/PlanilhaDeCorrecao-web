@@ -33,6 +33,31 @@ ul
 {
     margin-top: -10px;
 }
+.segundaPaginaPrincipal
+{
+    display: inline-block;
+}
+.segundaPagina
+{
+    float: left;
+}
+.segundaPagina > p 
+{
+    margin-right: 50px;
+    padding-left: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.gabarito > input[type="text"]
+{
+    width: 40px;
+}
+
+.gabarito2
+{
+    border-right: 2px solid black;
+}
+
 
 li
 {

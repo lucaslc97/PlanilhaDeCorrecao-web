@@ -34,41 +34,60 @@ var pagina1 = new Vue({
 //Javascript puro
 function gerar()
 {
-    let quantidadeObj = document.getElementById('obj').value;
-    let quantidadeQtd = document.getElementById('qtd').value;
-    
-    
-
-    let list = document.getElementById('lista');
-    var listaArray = [];
-    
-    
-
-
-    if ((quantidadeObj == 0 ) || (quantidadeQtd == 0 ))
-    {
-        alert("[ERRO] Digite um numero maior que zero!!");
-        listaArray = [];
-    }
-    else
-    {
-
-        alert(isNaN(quantidadeQtd))
-        listaArray = [];
-        var i; 
-
-        document.getElementById('objq').innerHTML = "<strong> Objetivos |  Questões</strong>"
-        document.getElementById('ate').innerHTML = "De - Até"
-
-        for (i = 1 ; i <= quantidadeObj; i++)
-        {
-            listaArray.push(`<li><strong class="a">${i}</strong> - <input type="text">  <input type="number"> <input type="number"></li>`); 
-            list.innerHTML = listaArray.join("");
-        }
-    }
-   
+  verificaInformacoesPrimeiraPagina()
+  
 
 }
+
+
+
+function verificaInformacoesPrimeiraPagina()
+{
+
+  let quantidadeObj = document.getElementById('obj').value;
+  let quantidadeQtd = document.getElementById('qtd').value;
+  let list = document.getElementById('lista');
+  
+  if ((quantidadeObj == 0  ) || (quantidadeQtd == 0))
+  {
+      alert("[ERRO] Digite um numero maior que zero e menor que 20");
+      listaArray = [];
+  }
+  else
+  {
+    
+      gabarito(quantidadeQtd)
+
+      listaArray = [];
+
+      document.getElementById('objq').innerHTML = "<strong> Objetivos |  Questões</strong>"
+      document.getElementById('ate').innerHTML = "De - Até"
+
+      for (i = 1 ; i <= quantidadeObj; i++)
+      {
+          listaArray.push(`<li class="a"><strong>${i}</strong> - <input type="text">  <input type="number"> <input type="number"></li>`); 
+          list.innerHTML = listaArray.join("");
+      }
+  }
+ 
+}
+
+
+function gabarito(gabaritoQTD)
+{
+  var GabaritoLista = document.getElementById("gabarito");
+  var i; 
+  gabaritoArray = []
+  for (i = 1; i <= gabaritoQTD; i++ )
+  {
+
+    gabaritoArray.push(`<li class="gabarito"><strong> ${i} </strong> - <input type="text">  `)
+    GabaritoLista.innerHTML = gabaritoArray.join("")
+
+  }
+}
+
+
 
 function avancar()
 {
@@ -88,17 +107,4 @@ function avancar()
             pagina3.status = false;
             pagina4.status = true;
         }
-}
-
-gabarito()
-
-function gabarito()
-{
-
-  var gabaritoQTD = this.quantidadeQtd
-
-  alert(gabaritoQTD)
-  
-  
-
 }
