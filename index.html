@@ -7,20 +7,30 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Berkeley - Correção de provas</title>
   </head>
   <body>
     <div class="conteudo container">
-        <div class="questoes container">
+        <div v-show="status" id="pag1" class="questoes container">
          <p>Quantidade de questões:<input type="number" id="qtd"><br>
           Numero de objetivos:<input type="number" id="obj"><input onclick="gerar()" type="button" value="Gerar"></p> 
           <h1 id="objq"></h1>
           <h2 id="ate"></h2>
           <ul id="lista">
-           
           </ul>
         </div>
-        <input id="avançar" type="button" value="Avançar" oncanplaythrough="avancar()"
+        <div id="pag2" v-show='status'>
+          <p>Gabarito</p>
+          
+          <p>Conceito</p>
+        </div>
+        <div id="pag3" v-show="status">
+        </div>
+        <div id="pag4" v-show='status'>
+          <h1>Pagina 4 </h1>
+        </div>
+        <input id="avançar" type="button" value="Avançar" onclick="avancar()">
     </div>
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

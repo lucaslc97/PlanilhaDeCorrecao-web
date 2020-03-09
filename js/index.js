@@ -1,20 +1,59 @@
-   
+//VueJS 
 
+var pagina1 = new Vue({
+    el: '#pag1',
+    data: {
+      status: true
+    }
+  })
+
+  var pagina2 = new Vue({
+    el: '#pag2',
+    data: {
+      status: false
+    }
+  })
+
+  var pagina3 = new Vue({
+    el: '#pag3',
+    data: {
+      status: false
+    }
+  })
+
+  var pagina4 = new Vue ({
+    el : "#pag4",
+    data: {
+        status: false
+    }
+
+  })
+
+
+
+//Javascript puro
 function gerar()
 {
     let quantidadeObj = document.getElementById('obj').value;
     let quantidadeQtd = document.getElementById('qtd').value;
+    
+    
+
     let list = document.getElementById('lista');
     var listaArray = [];
     
+    
 
-    if (quantidadeObj == 0 )
+
+    if ((quantidadeObj == 0 ) || (quantidadeQtd == 0 ))
     {
         alert("[ERRO] Digite um numero maior que zero!!");
         listaArray = [];
-
-    }else
+    }
+    else
     {
+
+        alert(isNaN(quantidadeQtd))
         listaArray = [];
         var i; 
 
@@ -33,14 +72,33 @@ function gerar()
 
 function avancar()
 {
+    
+    if(pagina1.status == true)
+        {
+            pagina1.status = false;
+            pagina2.status = true; 
+        }
+    else if (pagina2.status == true)
+        {
+            pagina2.status = false; 
+            pagina3.status = true;
+        }
+    else if (pagina3.status == true )
+        {
+            pagina3.status = false;
+            pagina4.status = true;
+        }
+}
 
-    if ((this.quantidadeObj == 0) || (this.quantidadeQtd == 0 ))
-    {
-        alert('[ERRO]Por favor preencha todos os campos')
+gabarito()
 
-    }
+function gabarito()
+{
 
+  var gabaritoQTD = this.quantidadeQtd
 
-
+  alert(gabaritoQTD)
+  
+  
 
 }
